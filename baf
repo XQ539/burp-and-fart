@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 while getopts "bf" opt; do
   case $opt in
     b) FILE="/usr/local/bin/baf/Burp.mp3" ;;
