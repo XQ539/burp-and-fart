@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+while getopts "bf" opt; do
+  case $opt in
+    b) FILE="/usr/local/bin/baf/Burp.mp3" ;;
+    f) FILE="/usr/local/bin/baf/Fart.mp3" ;;
+  esac
+done
+
+[ -z "$FILE" ] && { echo "Usage: $0 -b|-f"; exit 2; }
+
+ffplay -nodisp -autoexit -loglevel quiet "$FILE"
